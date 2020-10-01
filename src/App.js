@@ -26,7 +26,7 @@ function App() {
   ]);
 
   const addToCart = (product) => {
-    setCart([...cart, product ]);
+    setCart([...cart, {...product} ]);
   };
 
   const removeFromCart = (productToRemove) => {
