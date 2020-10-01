@@ -37,6 +37,9 @@ function App() {
     setPage(nextPage);
   };
   
+  const clearCart = () => {
+    setCart([]);
+  };
   const getTotalSum = () => {
     return cart.reduce((sum, {cost} ) => sum + cost)
   };
@@ -63,7 +66,9 @@ function App() {
   const renderCart = () => (
     <div>
       <h1>Cart</h1>
-     
+     {cart.length>0 && (
+        <button onClick={clearCart}>Clear Cart</button>
+      )}
       <div className="products">
       {
         cart.map((product, idx) => (
