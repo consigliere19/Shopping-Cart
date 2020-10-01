@@ -38,7 +38,7 @@ function App() {
   };
   
   const getTotalSum = () => {
-    return cart.reduce((sum, {cost} ) => sum + cost)
+    return cart.reduce((sum, {cost} ) => sum + cost, 0)
   };
 
   const renderProducts = () => (
